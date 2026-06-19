@@ -125,8 +125,8 @@ export const projects = [
       "An AI-powered SOP (Statement of Purpose) validation tool designed to analyze, review, and improve SOP content by providing structured feedback and enhancement suggestions for better clarity and impact.",
     tags: ["Python", "AI/ML", "Colab"],
     // image: sopImg,
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "",
+    githubUrl: "",
   },
 ];
 
