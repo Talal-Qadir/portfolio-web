@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { MapPin, Send, Phone } from "lucide-react";
@@ -15,19 +15,7 @@ const iconMap = {
 };
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setForm({ name: "", email: "", message: "" });
-    setTimeout(() => setSubmitted(false), 4000);
-  };
+  const [state, handleSubmit] = useForm("mqeorbkk");
 
   return (
     <Section
@@ -55,6 +43,7 @@ export default function Contact() {
               <FaEnvelope size={18} />
               <a href={`mailto:${profile.email}`}>{profile.email}</a>
             </li>
+
             <li>
               <Phone size={18} />
               <span>{profile.phone}</span>
@@ -77,7 +66,6 @@ export default function Contact() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={label}
                 >
                   {Icon && <Icon size={18} />}
                 </a>
@@ -95,46 +83,41 @@ export default function Contact() {
         >
           <div className="contact__field">
             <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
+            <input name="name" type="text" required />
           </div>
 
           <div className="contact__field">
             <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={handleChange}
-              required
+            <input name="email" type="email" required />
+
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
           </div>
 
           <div className="contact__field">
             <label>Message</label>
-            <textarea
-              name="message"
-              placeholder="Write something"
-              rows={5}
-              value={form.message}
-              onChange={handleChange}
-              required
+            <textarea name="message" rows={5} required />
+
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
             />
           </div>
 
-          <button type="submit" className="btn btn--primary contact__submit">
+          <button
+            type="submit"
+            className="btn btn--primary contact__submit"
+            disabled={state.submitting}
+          >
             <Send size={18} />
-            Send Message
+            {state.submitting ? "Sending..." : "Send Message"}
           </button>
 
-          {submitted && (
+          {state.succeeded && (
             <p className="contact__success">
               Message sent successfully! I’ll get back to you soon.
             </p>
