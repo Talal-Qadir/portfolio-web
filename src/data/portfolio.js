@@ -91,38 +91,39 @@ export const techTags = [
 ];
 
 export const projects = [
-  {
-    title: "Portfolio Website",
-    description:
-      "Modern Vite + React portfolio with animations, dark theme, and fully responsive design.",
-    tags: ["React", "Vite", "CSS"],
-    image: portfolioImg,
-    liveUrl: "https://muhammadtalalqadirportfolio.site",
-    githubUrl: "#",
-  },
+ 
   {
     title: "Zemo Works",
     description:
-      "Machine learning model for prediction and data analysis using Python and scikit-learn.",
-    tags: ["Python", "ML", "Pandas"],
+      "A full-stack project management system that helps teams organize tasks, manage workspaces, and improve collaboration efficiently.",
+    tags: ["Python", "Django", "RestAPI","React", "MySQL"],
     image: zemoImg,
     liveUrl: "https://zemoworks.com/",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Talal-Qadir/zemoworks",
   },
   {
     title: "HRMS Zemotifty",
     description:
-      "Face recognition-based security system using AI, OpenCV, and real-time video processing.",
-    tags: ["OpenCV", "Python", "AI"],
+      "Centralizing employee data, payroll, attendance, and performance management into a unified platform, HRMS streamlines HR operations through automation and delivers real-time insights to support efficient and data-driven decision-making.",
+    tags: ["Python", "Django", "RestAPI","React", "MySQL"],
     image: hrmsImg,
     liveUrl: "https://hr.zemoworks.com/",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Talal-Qadir/hr.zemoworks",
   },
   {
-    title: "SOP Validator",
+    title: "Portfolio Website",
     description:
-      "Frontend UI for a modern shopping platform with cart flow, filters, and clean product cards.",
-    tags: ["React", "UI/UX", "Responsive"],
+      "A modern and responsive developer portfolio built with React and Vite, featuring smooth animations, dark theme support, and optimized performance to showcase projects and skills effectively.",
+    tags: ["React", "Vite", "CSS"],
+    image: portfolioImg,
+    liveUrl: "https://muhammadtalalqadirportfolio.site",
+    githubUrl: "https://github.com/Talal-Qadir/talal-qadir-portfolio",
+  },
+  {
+    title: "Error Validator",
+    description:
+      "An AI-powered SOP (Statement of Purpose) validation tool designed to analyze, review, and improve SOP content by providing structured feedback and enhancement suggestions for better clarity and impact.",
+    tags: ["Python", "AI/ML", "Colab"],
     // image: sopImg,
     liveUrl: "#",
     githubUrl: "#",
