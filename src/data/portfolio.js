@@ -1,5 +1,5 @@
 import profileImg from "./../assets/Talal_Image.jpg";
-// import portfolioImg from "./../assets/portfolio.jpg";
+import portfolioImg from "./../assets/Talal_2nd_image.jpeg";
 import zemoImg from "./../assets/ZemoWork.png";
 import hrmsImg from "./../assets/HR_zemoworks.png";
 // import sopImg from "./../assets/sop.jpg";
@@ -123,7 +123,7 @@ export const projects = [
     description:
       "Frontend UI for a modern shopping platform with cart flow, filters, and clean product cards.",
     tags: ["React", "UI/UX", "Responsive"],
-    image: sopImg,
+    // image: sopImg,
     liveUrl: "#",
     githubUrl: "#",
   },
