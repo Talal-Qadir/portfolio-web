@@ -1,6 +1,6 @@
 import profileImg from "./../assets/Talal_Image.jpg";
 // import portfolioImg from "./../assets/portfolio.jpg";
-import zemoImg from "./../assets/ZemoWorks.png";
+import zemoImg from "./../assets/ZemoWork.png";
 import hrmsImg from "./../assets/HR_zemoworks.png";
 // import sopImg from "./../assets/sop.jpg";
 
