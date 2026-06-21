@@ -43,7 +43,7 @@ export const sectionIds = navLinks.map((link) => link.href.slice(1));
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com/Talal-Qadir", icon: "github" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-talal-qadir/", icon: "linkedin" },
-  { label: "Twitter", href: "https://twitter.com", icon: "twitter" },
+  { label: "Twitter", href: "https://x.com/talal_baloxh", icon: "twitter" },
   { label: "Email", href: "mailto:qadirmuhammadtalal@gmail.com", icon: "mail" },
 ];
 
