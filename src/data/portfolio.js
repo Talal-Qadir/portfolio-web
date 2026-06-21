@@ -2,7 +2,7 @@ import profileImg from "./../assets/Talal_Image.jpg";
 import portfolioImg from "./../assets/portfolio.png";
 import zemoImg from "./../assets/ZemoWork.png";
 import hrmsImg from "./../assets/HR_zemoworks.png";
-// import sopImg from "./../assets/sop.jpg";
+import sopImg from "./../assets/sop.jpg";
 
 
 export const profile = {
@@ -113,20 +113,20 @@ export const projects = [
   {
     title: "Portfolio Website",
     description:
-      "A modern and responsive developer portfolio built with React and Vite, featuring smooth animations, dark theme support, and optimized performance to showcase projects and skills effectively.",
+      "A modern and responsive developer portfolio built with React, Vite and Django for backend, featuring smooth animations, dark theme support, and optimized performance to showcase projects and skills effectively.",
     tags: ["React", "Vite", "CSS"],
     image: portfolioImg,
     liveUrl: "https://muhammadtalalqadirportfolio.site",
     githubUrl: "https://github.com/Talal-Qadir/talal-qadir-portfolio",
   },
   {
-    title: "Error Validator",
+    title: "Error Validation Fro SOP",
     description:
       "An AI-powered SOP (Statement of Purpose) validation tool designed to analyze, review, and improve SOP content by providing structured feedback and enhancement suggestions for better clarity and impact.",
     tags: ["Python", "AI/ML", "Colab"],
     // image: sopImg,
-    liveUrl: "",
-    githubUrl: "",
+    liveUrl: "https://colab.research.google.com/drive/1Q7xY5l0kmmkP6rV8_zfd583_IbiS73cx",
+    githubUrl: "https://github.com/Talal-Qadir/Error_verficaion_from_sop",
   },
 ];
 
