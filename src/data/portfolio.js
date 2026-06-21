@@ -120,7 +120,7 @@ export const projects = [
     githubUrl: "https://github.com/Talal-Qadir/talal-qadir-portfolio",
   },
   {
-    title: "Error Validation Fro SOP",
+    title: "Error Validation For SOP",
     description:
       "An AI-powered SOP (Statement of Purpose) validation tool designed to analyze, review, and improve SOP content by providing structured feedback and enhancement suggestions for better clarity and impact.",
     tags: ["Python", "AI/ML", "Colab"],
