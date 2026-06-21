@@ -10,7 +10,7 @@ import "./Contact.css";
 const iconMap = {
   github: FaGithub,
   linkedin: FaLinkedin,
-  twitter: FaTwitter,
+  // twitter: FaTwitter,
   mail: FaEnvelope,
 };
 
