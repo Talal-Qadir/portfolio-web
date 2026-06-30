@@ -87,7 +87,8 @@ export const techTags = [
   "MongoDB",
   "PostgreSQL",
   "Git",
-  "Figma",
+  "Cloud Computing",
+  "AWS",
 ];
 
 export const projects = [
@@ -135,28 +136,38 @@ export const experience = [
     title: "Django Backend Developer",
     company: "Zemotify",
     period: "March 2026 – Present",
-    type: "Full Time",
+    type: "Full-time",
     description:
-      "Design and deliver full stack web applications for clients using React, Django, and REST APIs. Focus on responsive UI, clean architecture, and on-time delivery.",
+      "Develop and maintain scalable backend services using Django and Django REST Framework while contributing to full-stack web applications with React. Design secure REST APIs, optimize databases, and collaborate with cross-functional teams to deliver reliable software solutions.",
     highlights: [
-      "Built 10+ production-ready web apps for startups and individuals",
-      "Improved page load performance by optimizing API calls and assets",
-      "Maintained reusable component libraries for faster project delivery",
+      "Developed and maintained backend services using Django and Django REST Framework (DRF)",
+      "Designed and implemented secure RESTful APIs for web applications",
+      "Managed and optimized MySQL database structures for better performance",
+      "Implemented JWT and session-based authentication systems",
+      "Integrated backend APIs with React frontend components",
+      "Collaborated with frontend developers to ensure seamless API integration",
+      "Debugged and optimized application performance for scalability and reliability",
+      "Contributed to enterprise applications including HRMS and Zemo Works",
     ],
   },
   {
-    title: "Technical Support Engineer",
+    title: "Technical Support Intern",
     company: "Systems Limited",
     period: "October 2025 – March 2026",
     type: "Internship",
     description:
-      "Supported the development team in building and testing web features across frontend and backend stacks.",
+      "Worked with automation, AI, and DevOps teams to monitor enterprise platforms, troubleshoot production issues, and support infrastructure operations while ensuring service reliability and SLA compliance.",
     highlights: [
-      "Developed REST API endpoints and integrated them with React views",
-      "Fixed bugs and improved UI consistency across multiple modules",
-      "Collaborated with senior developers using Git and agile workflows",
+      "Assisted in AI model development for enterprise monitoring dashboards",
+      "Collaborated with Automation and Problem Management teams on process automation",
+      "Monitored enterprise platforms using logs, dashboards, and alerts",
+      "Worked with Development and DevOps teams to resolve bugs and performance issues",
+      "Managed support tickets while maintaining SLA targets",
+      "Resolved Azure server, storage, and file-processing issues",
+      "Escalated complex incidents to L2 and L3 engineering teams",
     ],
   },
+];
   // {
   //   title: "Junior Frontend Developer",
   //   company: "Digital Agency Name",
@@ -170,7 +181,7 @@ export const experience = [
   //     "Ensured cross-browser compatibility and mobile-first design",
   //   ],
   // },
-];
+;
 
 export const education = [
   {
