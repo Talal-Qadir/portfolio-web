@@ -3,6 +3,8 @@ import portfolioImg from "./../assets/portfolio.png";
 import zemoImg from "./../assets/ZemoWork.png";
 import hrmsImg from "./../assets/HR_zemoworks.png";
 import sopImg from "./../assets/sop.jpg";
+import breastCancerImg from "./../assets/sop.jpg";
+
 
 
 export const profile = {
@@ -128,6 +130,15 @@ export const projects = [
     image: sopImg,
     liveUrl: "https://colab.research.google.com/drive/1Q7xY5l0kmmkP6rV8_zfd583_IbiS73cx",
     githubUrl: "https://github.com/Talal-Qadir/Error_verficaion_from_sop",
+  },
+    {
+    title: "Breast Cancer Prediction System ",
+    description:
+      "A deep learning-powered web application that predicts whether a breast tumor is benign or malignant using histopathological images. The system provides confidence scores, risk percentages, personalized treatment and diet recommendations, and an AI chatbot for breast cancer-related assistance.",
+    tags: ["Flask", "Gemini API", "CNN", "TensorFlow", "Keras"],
+    image: breastCancerImg,
+    liveUrl: "https://github.com/Talal-Qadir/breast-cancer-prediction-using-deep-learning-A-flask-base-website",
+    githubUrl: "https://github.com/Talal-Qadir/breast-cancer-prediction-using-deep-learning-A-flask-base-website",
   },
 ];
 
