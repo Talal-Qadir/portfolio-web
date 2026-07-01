@@ -3,7 +3,7 @@ import portfolioImg from "./../assets/portfolio.png";
 import zemoImg from "./../assets/ZemoWork.png";
 import hrmsImg from "./../assets/HR_zemoworks.png";
 import sopImg from "./../assets/sop.jpg";
-import breastCancerImg from "./../assets/sop.jpg";
+import breastCancerImg from "./../assets/breast_cancer_image.png";
 
 
 
