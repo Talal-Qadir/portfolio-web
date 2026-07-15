@@ -4,6 +4,8 @@ import zemoImg from "./../assets/ZemoWork.png";
 import hrmsImg from "./../assets/HR_zemoworks.png";
 import sopImg from "./../assets/sop.jpg";
 import breastCancerImg from "./../assets/breast_cancer_image.png";
+import pagepilotImg from "./../assets/pagepilot.png";
+
 
 
 
@@ -85,12 +87,14 @@ export const techTags = [
   "TypeScript",
   "Django",
   "Python",
+  "DRF",
   "REST API",
   "MongoDB",
   "PostgreSQL",
   "Git",
   "Cloud Computing",
   "AWS",
+  "CI/CD",
 ];
 
 export const projects = [
@@ -103,6 +107,15 @@ export const projects = [
     image: zemoImg,
     liveUrl: "https://zemoworks.com/",
     githubUrl: "https://github.com/Talal-Qadir/zemoworks",
+  },
+  {
+    title: "PagePilot",
+    description:
+      "A comprehensive Facebook Messenger CRM that helps businesses manage multiple Facebook Pages, organize customer conversations, assign chats to team members, collaborate with internal notes, and run Meta-compliant messaging campaigns from a single dashboard.",
+    tags: [ "React", "Django", "DRF", "MySQL", "JWT", "Facebook Graph API", "WebSockets" ],
+    image: pagepilotImg,
+    liveUrl: "https://pagepilot.sbs/",
+    githubUrl: "https://github.com/Talal-Qadir/pagepilot/",
   },
   {
     title: "HRMS Zemotifty",
