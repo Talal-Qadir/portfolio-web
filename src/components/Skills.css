@@ -7,7 +7,7 @@
 .skills__categories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .skills__card {
@@ -128,6 +128,17 @@
 
 @media (max-width: 960px) {
   .skills__categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .skills__categories {
     grid-template-columns: 1fr;
+  }
+
+  .skills__card,
+  .skills__tags {
+    padding: 1.25rem;
   }
 }

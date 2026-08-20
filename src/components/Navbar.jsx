@@ -32,6 +32,7 @@ export default function Navbar() {
                 href={href}
                 className={`navbar__link ${isActive ? "navbar__link--active" : ""}`}
                 onClick={handleNavClick}
+                aria-current={isActive ? "location" : undefined}
               >
                 {label}
               </a>

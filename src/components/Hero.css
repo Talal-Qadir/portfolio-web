@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   padding-top: var(--nav-height);
+  isolation: isolate;
   overflow: hidden;
   background: radial-gradient(
       ellipse 80% 60% at 50% -10%,
@@ -57,7 +58,8 @@
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: clamp(2rem, 5vw, 4rem);
-  padding-block: clamp(3rem, 8vw, 5rem);
+  padding-block: clamp(1rem, 1vw, 2rem);
+  min-width: 0;
 }
 
 .hero__content {
@@ -98,7 +100,7 @@
   font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .hero__typing {
@@ -137,6 +139,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  min-width: 0;
 }
 
 .hero__profile {
@@ -325,7 +328,7 @@
   }
 
   .hero__visual {
-    order: -1;
+    order: 0;
     width: 100%;
     max-width: 420px;
     margin-inline: auto;
@@ -338,7 +341,42 @@
 }
 
 @media (max-width: 480px) {
+  .hero__inner {
+    padding-block: 1.5rem 4.5rem;
+  }
+
+  .hero__badge {
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.875rem, 9vw, 2.5rem);
+  }
+
+  .hero__description {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .hero__profile-ring {
+    width: min(62vw, 230px);
+  }
+
+  .hero__card {
+    max-width: 100%;
+  }
+
+  .hero__code {
+    padding: 1rem;
+    font-size: 0.6875rem;
+  }
+
   .hero__actions .btn {
     width: 100%;
+  }
+
+  .hero__scroll {
+    bottom: 1.25rem;
   }
 }

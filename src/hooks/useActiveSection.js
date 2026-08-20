@@ -12,34 +12,40 @@ export default function useActiveSection(sectionIds) {
 
     if (!elements.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let bestEntry = null;
+    const getNavHeight = () =>
+      document.querySelector(".navbar")?.getBoundingClientRect().height || 0;
 
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (
-              !bestEntry ||
-              entry.intersectionRatio > bestEntry.intersectionRatio
-            ) {
-              bestEntry = entry;
-            }
-          }
-        });
+    const updateFromScrollPosition = () => {
+      const activationLine = getNavHeight() + 24;
+      let currentSection = elements[0].id;
 
-        if (bestEntry) {
-          setActiveSection(bestEntry.target.id);
+      elements.forEach((element) => {
+        if (element.getBoundingClientRect().top <= activationLine) {
+          currentSection = element.id;
         }
-      },
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    const observer = new IntersectionObserver(
+      () => updateFromScrollPosition(),
       {
-        threshold: 0.4,
-        rootMargin: "-20% 0px -20% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+        rootMargin: `-${getNavHeight()}px 0px -55% 0px`,
       }
     );
 
     elements.forEach((el) => observer.observe(el));
+    updateFromScrollPosition();
+    window.addEventListener("scroll", updateFromScrollPosition, {
+      passive: true,
+    });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", updateFromScrollPosition);
+    };
   }, [sectionIds]);
 
   return activeSection;

@@ -1,7 +1,7 @@
 .footer {
   background: var(--bg-elevated);
   border-top: 1px solid var(--border);
-  padding: 3rem 0 1.5rem;
+  padding: clamp(2.5rem, 6vw, 4rem) 0 1.5rem;
 }
 
 .footer__top {
@@ -48,7 +48,7 @@
   display: flex;
   justify-content: center;
   gap: 0.75rem;
-  padding: 1.75rem 0;
+  padding: 1.5rem 0;
 }
 
 .footer__social-link {

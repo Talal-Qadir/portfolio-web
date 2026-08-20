@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { Eye, Mail } from "lucide-react";
 import { profile } from "../data/portfolio";
 import "./Hero.css";
 import profileImg from "../assets/Talal_Image.jpg";
+import ResumeViewer from "./ResumeViewer";
 
 function HeroProfileImage() {
   const [hasError, setHasError] = useState(false);
@@ -39,6 +40,9 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const resumeTriggerRef = useRef(null);
+  const closeResume = useCallback(() => setIsResumeOpen(false), []);
 
   useEffect(() => {
     const current = profile.roles[roleIndex];
@@ -107,10 +111,15 @@ export default function Hero() {
               <Mail size={18} />
               Hire Me
             </a>
-            <a href="/Muhammad_Talal_Qadir_Resume.pdf" download className="btn btn--ghost">
-              <Download size={18} />
-              Download Resume
-            </a>
+            <button
+              ref={resumeTriggerRef}
+              type="button"
+              className="btn btn--ghost"
+              onClick={() => setIsResumeOpen(true)}
+            >
+              <Eye size={18} />
+              View Resume
+            </button>
           </div>
         </motion.div>
 
@@ -143,9 +152,15 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <a href="#about" className="hero__scroll" aria-label="Scroll to about section">
+      {/* <a href="#about" className="hero__scroll" aria-label="Scroll to about section">
         <ArrowDown size={20} />
-      </a>
+      </a> */}
+
+      <ResumeViewer
+        isOpen={isResumeOpen}
+        onClose={closeResume}
+        returnFocusRef={resumeTriggerRef}
+      />
     </section>
   );
 }

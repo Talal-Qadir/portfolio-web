@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .navbar__brand {
@@ -34,9 +34,9 @@
 .navbar__brand-mark {
   display: grid;
   place-items: center;
-  width: 2.5rem;
+  width: 2.25rem;
   color: var(--accent);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .navbar__brand-text {
@@ -86,7 +86,7 @@
 .navbar__link--active::after {
   content: "";
   position: absolute;
-  bottom: 0.25rem;
+  bottom: 0.2rem;
   left: 50%;
   transform: translateX(-50%);
   width: 4px;
@@ -134,7 +134,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0.25rem;
-    padding: 1rem;
+    padding: 0.75rem var(--page-gutter) 1rem;
     background: rgba(6, 11, 20, 0.98);
     border-bottom: 1px solid var(--border);
     transform: translateY(-110%);
@@ -155,7 +155,8 @@
   }
 
   .navbar__link--active::after {
-    display: none;
+    display: block;
+    bottom: 0.35rem;
   }
 
   .navbar__cta {
@@ -164,6 +165,16 @@
 
   .navbar__toggle {
     display: inline-flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar__inner {
+    gap: 0.5rem;
+  }
+
+  .navbar__brand-text strong {
+    font-size: 0.9375rem;
   }
 }
 

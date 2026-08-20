@@ -66,6 +66,7 @@ export default function Contact() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={label}
                 >
                   {Icon && <Icon size={18} />}
                 </a>
@@ -82,13 +83,13 @@ export default function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
         >
           <div className="contact__field">
-            <label>Name</label>
-            <input name="name" type="text" required />
+            <label htmlFor="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" required />
           </div>
 
           <div className="contact__field">
-            <label>Email</label>
-            <input name="email" type="email" required />
+            <label htmlFor="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" required />
 
             <ValidationError
               prefix="Email"
@@ -98,8 +99,8 @@ export default function Contact() {
           </div>
 
           <div className="contact__field">
-            <label>Message</label>
-            <textarea name="message" rows={5} required />
+            <label htmlFor="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows={5} required />
 
             <ValidationError
               prefix="Message"
