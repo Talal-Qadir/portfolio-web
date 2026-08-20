@@ -1,4 +1,5 @@
 import { useForm, ValidationError } from "@formspree/react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { MapPin, Send, Phone } from "lucide-react";
@@ -16,6 +17,13 @@ const iconMap = {
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("mqeorbkk");
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      formRef.current?.reset();
+    }
+  }, [state.succeeded]);
 
   return (
     <Section
@@ -77,6 +85,7 @@ export default function Contact() {
 
         {/* FORM */}
         <motion.form
+          ref={formRef}
           className="contact__form"
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 20 }}
