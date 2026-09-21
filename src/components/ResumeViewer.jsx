@@ -41,7 +41,7 @@ const resumeSkills = [
 
 const experiences = [
   {
-    title: "Django Backend Developer Intern",
+    title: "Python Full Stack Developer",
     company: "Zemotify - Lahore, Pakistan",
     period: "March 2026 - Present",
     bullets: [
